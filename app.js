@@ -1,24 +1,24 @@
 require('dotenv').config()
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser')
-var logger = require('morgan');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser')
+const logger = require('morgan');
 
-var indexRouter = require('./routes/index')
-var userRouter = require('./routes/users')
-var locationRouter = require('./routes/locations')
+const indexRouter = require('./routes/index')
+const userRouter = require('./routes/users')
+const locationRouter = require('./routes/locations')
 
-var app = express();
+const app = express();
 
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false}));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'client/build')));
 
-// app.get('/', function (req, res) {
-//   res.json({success: 'test'})
-// })
+app.get('/', function (req, res) {
+  res.json({success: 'test'})
+})
 
 app.use('/', indexRouter);
 app.use('/api/v1/users', userRouter);

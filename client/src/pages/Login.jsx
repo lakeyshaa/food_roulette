@@ -2,16 +2,17 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from 'react-router-dom';
 
-const Register = () => {
+const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate()
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post("/api/v1/user/register", { email, password }).then((res) => {
+    axios.post("/api/v1/user/login", { email, password }).then((res) => {
       alert("Registration Successful");
-      navigate('/login')
+      navigate('/login') //change this name and route at some point
+      localStorage.setItem('token', res.data.token)
     })
     .catch(err => {
       alert(err.response.data.error)
@@ -20,7 +21,7 @@ const Register = () => {
 
   return (
     <div>
-      Register Here
+      Login
       <form onSubmit={(e) => handleSubmit(e)}>
         <p>
           <label htmlFor="email">Email</label>
@@ -48,4 +49,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default Login;

@@ -1,17 +1,18 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { useNavigate } from 'react-router-dom';
+import { Button } from "@mui/material";
+//import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const navigate = useNavigate()
+  //const navigate = useNavigate()
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post("/api/v1/user/login", { email, password }).then((res) => {
-      alert("Registration Successful");
-      navigate('/login') //change this name and route at some point
+    axios.post("/api/v1/users/login", { email, password }).then((res) => {
+      alert("Login successful");
+      window.location='/search' 
       localStorage.setItem('token', res.data.token)
     })
     .catch(err => {
@@ -21,10 +22,10 @@ const Login = () => {
 
   return (
     <div>
-      Login
+      <h1>Login</h1>
       <form onSubmit={(e) => handleSubmit(e)}>
         <p>
-          <label htmlFor="email">Email</label>
+          <label htmlFor="email"><h3>Email</h3></label>
           <input
             type="email"
             id="email"
@@ -34,7 +35,7 @@ const Login = () => {
           />
         </p>
         <p>
-          <label htmlFor="password">Password</label>
+          <label htmlFor="password"><h3>Password</h3></label>
           <input
             type="password"
             id="password"
@@ -43,7 +44,7 @@ const Login = () => {
             required
           />
         </p>
-        <button type="submit">Sign Up</button>
+        <Button variant="contained" type="submit">Sign In</Button>
       </form>
     </div>
   );

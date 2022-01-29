@@ -1,10 +1,10 @@
 const express = require("express");
 const bcrypt = require("bcrypt");
-//const jwt = require("jsonwebtoken");
+const jwt = require("jsonwebtoken");
 const router = express.Router();
 const models = require("../models");
 
-/* POST /api/v1/users/register */
+/* POST //users/register */
 router.post("/register", function (req, res, next) {
   if (!req.body.email || !req.body.password) {
     res.status(400).json({ error: "please include all required fields" });

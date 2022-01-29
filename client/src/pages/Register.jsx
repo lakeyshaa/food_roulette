@@ -1,29 +1,31 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post("/api/v1/user/register", { email, password }).then((res) => {
-      alert("Registration Successful");
-      navigate('/login')
-    })
-    .catch(err => {
-      alert(err.response.data.error)
-    })
-  };
-
+    axios
+      .post("/api/v1/users/register", { email, password })
+      .then(res => {
+        alert("Registration Successful");
+        navigate("/login");
+      })
+      .catch((err) => {
+        alert(err.response.data.error);
+      });
+  
+    }
   return (
     <div>
-      Register Here
+      <h1>Create your Account</h1>
       <form onSubmit={(e) => handleSubmit(e)}>
         <p>
-          <label htmlFor="email">Email</label>
+          <label htmlFor="email"><h3>Email</h3></label><br />
           <input
             type="email"
             id="email"
@@ -33,7 +35,7 @@ const Register = () => {
           />
         </p>
         <p>
-          <label htmlFor="password">Password</label>
+          <label htmlFor="password"><h3>Password</h3></label>
           <input
             type="password"
             id="password"
@@ -45,7 +47,7 @@ const Register = () => {
         <button type="submit">Sign Up</button>
       </form>
     </div>
-  );
+  )
 };
 
 export default Register;

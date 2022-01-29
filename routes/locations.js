@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
 const models = require('../models')
-//const checkAuth = require('../checkAuth');
+const checkAuth = require('../checkAuth');
 
 // GET /api/v1/locations
-router.get('/', /*checkAuth,*/ (req, res) => {
+router.get('/', checkAuth, (req, res) => {
   models.Location.findAll({ where: { UserId: req.user.id }})
     .then(locations => {
       res.json(locations)
@@ -12,7 +12,7 @@ router.get('/', /*checkAuth,*/ (req, res) => {
 });
 
 // DELETE /api/v1/locations/6 
-router.delete('/:id', /*checkAuth,*/ (req, res) => {
+router.delete('/:id', checkAuth, (req, res) => {
   // try and remove location with id, so long as it is owned by the logged in user
   models.Location.destroy({ where: { 
     id: req.params.id,
@@ -31,7 +31,7 @@ router.delete('/:id', /*checkAuth,*/ (req, res) => {
 })
 
 // POST /api/v1/locations
-router.post('/', /*checkAuth,*/ (req, res) => {
+router.post('/', checkAuth, (req, res) => {
   // check for required fields
   if (!req.body.zipcode) {
     res.status(400).json({ error: 'please provide zipcode' })

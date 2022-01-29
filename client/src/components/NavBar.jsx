@@ -1,5 +1,7 @@
+import { Button } from "@mui/material";
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+
 
 function NavBar() {
   const token = localStorage.getItem("token");
@@ -11,23 +13,30 @@ function NavBar() {
 
   return (
     <nav>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
+      <ul className="navBar">
+        <li className="homeLink">
+          <Button variant="contained">Home</Button>
         </li>
         {isLoggedIn ? (
+          <>
           <li>
-            <button href="#" onClick={() => handleLogout()}>
-              Log Out
-            </button>
+            <Button  variant="contained" href="#" onClick={() => handleLogout()}
+            > Log Out
+            </Button>
           </li>
+          <li>
+            <Button  variant="contained" href="/search">
+              Search 
+            </Button>
+          </li>
+          </>
         ) : (
           <>
             <li>
-              <Link to="/">Register</Link>
+              <Button variant="contained" href="/register">Register</Button>
             </li>
             <li>
-              <Link to="/">Login</Link>
+              <Button variant="contained" href="/login">Login</Button>
             </li>
           </>
         )}

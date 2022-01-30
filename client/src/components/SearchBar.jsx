@@ -1,4 +1,4 @@
-import { Button, Card, CardActions, CardContent, TextField, Typography } from "@mui/material";
+import { Button, Card, CardActions, CardContent, CircularProgress, TextField, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React, { useState } from "react";
 //import { button } from "react-bootstrap";
@@ -63,10 +63,10 @@ const SearchBar = () => {
 
   return (
     <>
-    <Box sx={{ mt: 15 }} >
+    <Box className = "box" sx={{ mt: 15, mr: 20, ml: 15  }} >
       {!restaurants.length ? (
         <form className="search">
-          <TextField size="small" id="outlined-basic" label="Enter your Zipcode" variant="outlined" value={searchValue}
+          <TextField  size="small" id="outlined-basic" label="Enter your Zipcode" color="secondary" focused variant="outlined" value={searchValue}
             onChange={handleSearchInputChanges} />
 
           
@@ -74,12 +74,12 @@ const SearchBar = () => {
         </form>
       ) : (
         <>
-          {searchValue}<Button variant="contained" onClick={reset}>Reset</Button>
+          {searchValue}<Button sx={{ ml: 5}} variant="contained" onClick={reset}>Reset</Button>
         </>
       )}
         </Box>
 
-      {loading && <p>loading...</p>}
+      {loading && <p><CircularProgress></CircularProgress></p>}
 
       {restaurant && (
 
@@ -102,7 +102,7 @@ const SearchBar = () => {
             {restaurant?.cuisines}
           </CardContent>
           <CardActions>
-            <Button variant="contained" sx={{ m: 1 }} href={restaurant?.restaurant_website}>Website</Button>
+            <Button variant="contained" sx={{ m: 5 }} href={restaurant?.restaurant_website}>Website</Button>
             <Button variant="contained" onClick={pickAgain}>Pick Again</Button>
           </CardActions>
         </Card>

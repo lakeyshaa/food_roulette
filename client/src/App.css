@@ -2,45 +2,16 @@
   text-align: center;
   min-width: 100vw;
   min-height: 100vh;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}  
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-} 
-
-/* .App-header {
-  background-color: #282c34;
+  background-image: url('../public/background2.jpg');
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-} */
-
-.App-link {
-  color: #61dafb;
+  min-width: 100%;
+  background-size: cover;
+  background-position: top center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 nav {
-  background-color: transparent;
+background-color: transparent;
 margin-bottom: -67px;}
 
 .navBar {
@@ -70,4 +41,42 @@ li {
 }
 
 
+.formBox {
+color: white;
+margin-top: 25px;
+border-radius: 15px;
+box-sizing: border-box;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+position: absolute;
+width: 400px;
+height: 425px;
+background: rgba(255, 255, 255, 0.2)
+}
 
+
+
+.heading {
+  margin-top: 20%;
+  margin-bottom: 10%;
+}
+
+.loginBox {
+  color: white;
+  margin-top: 25px;
+  border-radius: 15px;
+  box-sizing: border-box;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  width: 400px;
+  height: 425px;
+  background: rgba(255, 255, 255, 0.2)
+  }
+
+ .instructions {
+   color: white;
+   margin: 5%;
+ }

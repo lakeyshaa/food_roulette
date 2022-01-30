@@ -6,6 +6,7 @@ import Login from './pages/Login';
 import NavBar from './components/NavBar';
 import Search from './pages/Search';
 import { createTheme, ThemeProvider } from "@mui/material"
+import Footer from './components/Footer';
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
         <Route path="/login" element={ <Login /> } /> 
         <Route path="/search" element={ <Search /> } />
       </Routes>
+      <Footer></Footer>
     </div>   
     </ThemeProvider>
   );

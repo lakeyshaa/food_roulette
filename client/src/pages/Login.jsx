@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { Button } from "@mui/material";
+import { Button, TextField } from "@mui/material";
 //import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
@@ -22,11 +22,18 @@ const Login = () => {
 
   return (
     <div>
-      <h1>Login</h1>
-      <form onSubmit={(e) => handleSubmit(e)}>
+      <div className="instructions">
+      <h2>Step 1: Login</h2>
+        <h2>Step 2: Enter Zip Code</h2>
+        <h2>Step 3: Get Random Food</h2>
+        </div>
+      
+      <form className="loginBox" onSubmit={(e) => handleSubmit(e)}>
+      <h1 className="heading">Login</h1>
         <p>
-          <label htmlFor="email"><h3>Email</h3></label>
-          <input
+          <TextField
+            variant="outlined"
+          label="Email"
             type="email"
             id="email"
             onChange={(e) => setEmail(e.target.value)}
@@ -35,8 +42,9 @@ const Login = () => {
           />
         </p>
         <p>
-          <label htmlFor="password"><h3>Password</h3></label>
-          <input
+        
+          <TextField
+          label="Password"
             type="password"
             id="password"
             onChange={(e) => setPassword(e.target.value)}

@@ -15,12 +15,12 @@ function NavBar() {
     <nav>
       <ul className="navBar">
         <li className="homeLink">
-          <Button variant="contained">Home</Button>
+          <Button variant="contained" href="/">Home</Button>
         </li>
         {isLoggedIn ? (
           <>
           <li>
-            <Button  variant="contained" href="#" onClick={() => handleLogout()}
+            <Button  variant="contained" href="/" onClick={() => handleLogout()}
             > Log Out
             </Button>
           </li>

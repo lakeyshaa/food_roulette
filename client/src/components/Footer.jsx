@@ -1,3 +1,7 @@
+import { Link } from "@mui/material";
+
+
+
 const Footer = ({ children }) => {
   const style = {
     backgroundColor: "rgb(178,63,181, 0.8)",

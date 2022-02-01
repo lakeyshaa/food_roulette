@@ -1,70 +1,61 @@
 # Food Roulette
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+__Food Roulette is a full-stack web applicaiton for helping indecisive eaters choose a random restaurant to grab food from.  It allows users to create an account and use their zipcode to choose where to eat randomly.__
 
-In the project directory, you can run:
+__Future functionality will include, the ability for users to save a list of their favorite restaurants and to order food delivery or pick up through a third-party application. Users will also be able to use geo location to navigate to the restaurant of their choosing. Lastly, users will be able to view menus and see reviews on particular restaurants before committing.__
 
-### `npm start`
+__If users are not satisfied with the random selection, they have the option to pick again.__
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Live Demo
 
-### `npm test`
+__See Food Roulette in action here:__ (https://food-roulette-app.herokuapp.com/).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Phase 1: Minimum Viable Product(Complete)
 
-### `npm run build`
+### Objective: Allow users to create an account and use their zipcode to choose where to eat randomly. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Walkthrough
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<img width="1437" alt="homepage" src="https://user-images.githubusercontent.com/82991137/151844715-0b791c1d-2975-4578-98c9-15bfb2ca8b86.png">
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<img width="1438" alt="register" src="https://user-images.githubusercontent.com/82991137/151844682-b4a015aa-ba66-4702-992f-6017b82454f8.png">
 
-### `npm run eject`
+<img width="1438" alt="login" src="https://user-images.githubusercontent.com/82991137/151844642-0cecebd7-720e-47f0-b941-5e4d4dbd2d97.png">
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Phase II (In Progress)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Phase II will include the ability for users to save a list of their favorite restaurants and to order food delivery or pick up through a third-party application. Users will also be able to use geo location to navigate to the restaurant of their choosing.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Phase III (In Progress)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Upon completion of Phase III, users will be able to view menus and see reviews on particular restaurants before committing.
 
-## Learn More
+## Tools & Technologies
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Node.js
+Express
+PostgresSQL
+JavaScript
+HTML
+CSS
+Material Ui
+React.js
+Redux
+Postman
+Beekeeper
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Packages & Dependencies
 
-### Code Splitting
+Documenu API
+express
+express-server
+bcrypt
+axios
+cookie parser
+nodemon
+morgan
+Google Fonts
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
